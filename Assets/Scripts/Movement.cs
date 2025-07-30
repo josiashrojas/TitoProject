@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     LayerMask groundLayer;
     [SerializeField]
     GameObject groundCheckCircle;
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
 
     bool grounded = true;
     float coyoteTimer=1;
@@ -31,7 +33,15 @@ public class Movement : MonoBehaviour
         grounded = Physics2D.OverlapCircle(groundCheckCircle.transform.position, 0.1f, groundLayer);
 
         movementX = Input.GetAxis("Horizontal");
-        rigidBody2D.linearVelocity= new Vector2 (speed* movementX, rigidBody2D.linearVelocity.y);
+        if (movementX<0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (movementX > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+            rigidBody2D.linearVelocity = new Vector2(speed * movementX, rigidBody2D.linearVelocity.y);
 
         if (grounded)
         {
