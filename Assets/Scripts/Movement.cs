@@ -33,7 +33,6 @@ public class Movement : MonoBehaviour
         movementX = Input.GetAxis("Horizontal");
         rigidBody2D.linearVelocity= new Vector2 (speed* movementX, rigidBody2D.linearVelocity.y);
 
-
         if (grounded)
         {
             coyoteTimer = coyoteTime;
@@ -47,7 +46,6 @@ public class Movement : MonoBehaviour
         {
             rigidBody2D.linearVelocity = new Vector2(rigidBody2D.linearVelocity.x, this.jump);
         }
-        print(coyoteTimer);
     }
     
 }
