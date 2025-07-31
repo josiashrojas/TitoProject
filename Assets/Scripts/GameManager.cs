@@ -33,11 +33,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(NivelActual);
     }
-    public void Blind()
-    {
-        //Aqui haces que ya no vea el pobre
-        print("No veooo");
-    }
+
     public void FlipObject(GameObject gm)
     {
         if (gm.activeSelf)

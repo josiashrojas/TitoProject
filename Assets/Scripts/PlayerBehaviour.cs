@@ -5,6 +5,8 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField]
     int estadoNivel;
+    [SerializeField]
+    private PLAYER_VISION playerVisionController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +23,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.tag == "BirdNest" && estadoNivel == 0) { 
             estadoNivel = 1;
-            GameManager.Instance.Blind();
+            this.playerVisionController.toggleDarknessArea();
+            this.playerVisionController.toggleBWMode();
         }
         if(other.tag=="Finish" && estadoNivel == 1){
             estadoNivel = 2;
