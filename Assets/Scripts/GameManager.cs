@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
+        if (NivelActual == 9)
+        {
+            NivelActual = -1;
+        }
         NivelActual++;
         SceneManager.LoadScene(NivelActual);
     }

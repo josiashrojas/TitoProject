@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void FlipObject(GameObject gm)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (gm.activeSelf)
+        {
+            gm.SetActive(false);
+        }
+        else
+        {
+            gm.SetActive(true);
+        }
     }
 }
