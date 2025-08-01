@@ -959,7 +959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4820b7af100304dab55f0778734bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundList: []
+  soundList:
+  - {fileID: 8300000, guid: 47a7355cef0d1e9429f856e40f76f963, type: 3}
+  - {fileID: 8300000, guid: 3f4a74a450f03e040bbc2ac507ba8d0f, type: 3}
 --- !u!82 &401834003
 AudioSource:
   m_ObjectHideFlags: 0

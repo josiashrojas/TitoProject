@@ -13,7 +13,8 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioSource;
     public enum SoundType
     {
-        // Agregar sonidos
+        FOOT_STEEP,
+        JUMP
     }
 
     private void Awake()
@@ -34,7 +35,7 @@ public class SoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(SoundType sound, float volume = 1)
+    public void PlaySound(SoundType sound, float volume = 1)
     {
         instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
     }

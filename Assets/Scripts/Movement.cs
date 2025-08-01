@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
             spriteRenderer.flipX = false;
         }
             rigidBody2D.linearVelocity = new Vector2(speed * movementX, rigidBody2D.linearVelocity.y);
+        
 
         if (grounded)
         {
@@ -55,6 +56,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && coyoteTimer>0)
         {
             rigidBody2D.linearVelocity = new Vector2(rigidBody2D.linearVelocity.x, this.jump);
+            SoundManager.instance.PlaySound(SoundManager.SoundType.JUMP);
         }
     }
     
