@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
     private AudioSource audioSource;
+    private bool isSoundActive = true;
     public enum SoundType
     {
         FOOT_STEEP,
@@ -37,7 +38,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(SoundType sound, float volume = 1)
     {
-        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+        if (isSoundActive)
+        {
+            instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+        }
     }
 
     public void applyLowPassFilter()
@@ -48,5 +52,17 @@ public class SoundManager : MonoBehaviour
     public void removeLowPassFilter()
     {
         BGMusicController.instance.ChangeLowPassFilter(BGMusicController.FilterOptions.OFF);
+    }
+
+    public void toggleAllSounds()
+    {
+        if (isSoundActive)
+        {
+            BGMusicController.instance.turnOffMusic();
+        } else
+        {
+            BGMusicController.instance.turnOnMusic();
+        }
+        isSoundActive = !isSoundActive;
     }
 }
