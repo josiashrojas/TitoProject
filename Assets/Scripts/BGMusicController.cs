@@ -34,4 +34,14 @@ public class BGMusicController : MonoBehaviour
             instance.audioSource.bypassEffects = false;
         }
     }
+
+    public void turnOffMusic()
+    {
+        instance.audioSource.enabled = false;
+    }
+
+    public void turnOnMusic()
+    {
+        instance.audioSource.enabled = true;
+    }
 }
