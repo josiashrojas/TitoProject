@@ -59,5 +59,10 @@ public class Movement : MonoBehaviour
             SoundManager.instance.PlaySound(SoundManager.SoundType.JUMP);
         }
     }
-    
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Death")
+            GameManager.Instance.Reload();
+    }
+
 }
