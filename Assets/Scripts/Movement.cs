@@ -57,5 +57,10 @@ public class Movement : MonoBehaviour
             rigidBody2D.linearVelocity = new Vector2(rigidBody2D.linearVelocity.x, this.jump);
         }
     }
-    
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Death")
+            GameManager.Instance.Reload();
+    }
+
 }

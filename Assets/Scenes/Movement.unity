@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 773102038}
   m_Layer: 0
   m_Name: Goal_left
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 806271859}
   m_Layer: 0
   m_Name: Goal_right
-  m_TagString: Untagged
+  m_TagString: BirdNest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estadoNivel: 0
+  playerVisionController: {fileID: 0}
 --- !u!1 &1855019093
 GameObject:
   m_ObjectHideFlags: 0

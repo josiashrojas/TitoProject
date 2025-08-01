@@ -9,7 +9,7 @@ public class PLAYER_VISION : MonoBehaviour
     [SerializeField]
     private GameObject DarknessArea;
     private Material darknessAreaMaterial;
-    [SerializeField, Range(0f, 50f)]
+    [SerializeField, Range(0f, 100f)]
     private float initialDarknessArea = 1f;
     private bool isDarknessAreaActive = false;
     private bool isBWMode = false;
