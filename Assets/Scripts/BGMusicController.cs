@@ -44,4 +44,9 @@ public class BGMusicController : MonoBehaviour
     {
         instance.audioSource.enabled = true;
     }
+
+    public void changeVolume(float level)
+    {
+       instance.audioSource.volume = level;
+    }
 }
