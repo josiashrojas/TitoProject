@@ -65,4 +65,9 @@ public class SoundManager : MonoBehaviour
         }
         isSoundActive = !isSoundActive;
     }
+    
+    public void changeVolume(float level)
+    {
+        instance.audioSource.volume = level;
+    }
 }
